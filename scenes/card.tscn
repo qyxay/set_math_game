@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://cb5n4rflwk1yd"]
+
+[ext_resource type="Script" uid="uid://dfdpg2b5uxj4c" path="res://script/card.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://jbg3meock0ri" path="res://sprite/card.png" id="1_d81rb"]
+[ext_resource type="FontFile" uid="uid://dlu6wrl471tjw" path="res://NotoSansSymbols-Regular-Subsetted.ttf" id="3_ktuci"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u12qf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_42c2t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg8fh"]
+atlas = ExtResource("1_d81rb")
+region = Rect2(0, 0, 308, 296)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcqax"]
+texture = SubResource("AtlasTexture_gg8fh")
+texture_margin_left = 45.0
+texture_margin_top = 48.0
+texture_margin_right = 45.0
+texture_margin_bottom = 35.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xcqax"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q4rc"]
+atlas = ExtResource("1_d81rb")
+region = Rect2(0, 296, 308, 120)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5biy"]
+texture = SubResource("AtlasTexture_3q4rc")
+texture_margin_left = 35.0
+texture_margin_right = 35.0
+texture_margin_bottom = 35.0
+
+[node name="Card" type="Control" unique_id=508252208]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 308.0
+offset_bottom = 416.0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+script = ExtResource("1_6u4wf")
+input_desc = "属于"
+
+[node name="Panel" type="Panel" parent="." unique_id=919459455]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u12qf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1853471548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Up" type="Panel" parent="Panel/VBoxContainer" unique_id=234243201]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.49
+theme_override_styles/panel = SubResource("StyleBoxEmpty_42c2t")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/Up" unique_id=343493795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xcqax")
+
+[node name="Symbol" type="Label" parent="Panel/VBoxContainer/Up" unique_id=2002050030]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ktuci")
+theme_override_font_sizes/font_size = 128
+text = "∈"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Down" type="Panel" parent="Panel/VBoxContainer" unique_id=479500483]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xcqax")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/Down" unique_id=2110087659]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_k5biy")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Down" unique_id=1987137809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Description" type="Label" parent="Panel/VBoxContainer/Down/MarginContainer" unique_id=2103808888]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "属于"
+metadata/_edit_lock_ = true

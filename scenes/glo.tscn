@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d3jlhg0eh76jk"]
+
+[ext_resource type="Script" uid="uid://pqp55d4glj3k" path="res://script/glo.gd" id="1_cxm3i"]
+
+[node name="Node" type="Node" unique_id=1170841706]
+script = ExtResource("1_cxm3i")

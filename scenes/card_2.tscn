@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://d5oe5c5kpsou"]
+
+[ext_resource type="Script" uid="uid://m2gxr6lhkqht" path="res://script/card2.gd" id="1_aibmn"]
+[ext_resource type="Texture2D" uid="uid://cantp67rscyty" path="res://sprite/card2.png" id="2_ou7wk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gg8fh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u12qf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u12qf"]
+atlas = ExtResource("2_ou7wk")
+region = Rect2(0, 0, 906, 116)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg8fh"]
+texture = SubResource("AtlasTexture_u12qf")
+texture_margin_left = 31.0
+texture_margin_top = 41.0
+texture_margin_right = 31.0
+
+[sub_resource type="FontVariation" id="FontVariation_rlkc6"]
+spacing_glyph = 14
+
+[sub_resource type="SystemFont" id="SystemFont_xcqax"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqjyg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5biy"]
+atlas = ExtResource("2_ou7wk")
+region = Rect2(0, 116, 906, 210)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u12qf"]
+texture = SubResource("AtlasTexture_k5biy")
+texture_margin_left = 51.0
+texture_margin_top = 35.0
+texture_margin_right = 51.0
+texture_margin_bottom = 61.0
+
+[sub_resource type="FontVariation" id="FontVariation_asx6u"]
+spacing_space = 12
+
+[sub_resource type="FontVariation" id="FontVariation_42c2t"]
+spacing_space = 15
+
+[node name="Card2" type="Control" unique_id=508252208]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -240.0
+offset_bottom = -394.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+script = ExtResource("1_aibmn")
+input_title1 = "欢迎你游玩此游戏！"
+input_desc = "  在此游戏中，你会通过卡牌上的指示，手机或制作必要的卡牌，完成相应的任务，从零创造一个世界。
+  议游玩时长：两个月。"
+input_up_ratio = 0.71
+is_middle = true
+
+[node name="Panel" type="Panel" parent="." unique_id=1315107027]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gg8fh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1017647661]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Up" type="Panel" parent="Panel/VBoxContainer" unique_id=41524640]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.71
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u12qf")
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/Up" unique_id=1052838286]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gg8fh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/Up" unique_id=920519980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Up/HBoxContainer" unique_id=1900138025]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 29
+
+[node name="Title1" type="Label" parent="Panel/VBoxContainer/Up/HBoxContainer/MarginContainer" unique_id=1919627698]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_rlkc6")
+theme_override_font_sizes/font_size = 90
+text = "欢迎你游玩此游戏！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/VBoxContainer/Up/HBoxContainer" unique_id=1536846783]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 27
+
+[node name="Title2" type="Label" parent="Panel/VBoxContainer/Up/HBoxContainer/MarginContainer2" unique_id=1848153798]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_xcqax")
+theme_override_font_sizes/font_size = 42
+vertical_alignment = 1
+
+[node name="Down" type="Panel" parent="Panel/VBoxContainer" unique_id=361489584]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xqjyg")
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/Down" unique_id=1294628969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_u12qf")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Down" unique_id=33885373]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 51
+theme_override_constants/margin_top = 31
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Down/MarginContainer" unique_id=442359016]
+visible = false
+custom_minimum_size = Vector2(144.94, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_asx6u")
+theme_override_font_sizes/font_size = 35
+text = "  在此游戏中，你会通过卡牌上的指示，收集或制作必要的卡牌，完成相应的任务，从零创造一个世界。
+  建议游玩时长：两个月。"
+autowrap_mode = 3
+
+[node name="Description" type="RichTextLabel" parent="Panel/VBoxContainer/Down/MarginContainer" unique_id=1598066629]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_42c2t")
+theme_override_font_sizes/normal_font_size = 35
+text = "  在此游戏中，你会通过卡牌上的指示，收集或制作必要的卡牌，完成相应的任务，从零创造一个世界。
+  建议游玩时长：两个月。"

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cyj5755x7tknm"]
+
+[ext_resource type="Script" uid="uid://bdln073nikjo" path="res://node_2d.gd" id="1_errlg"]
+
+[node name="Node2D" type="Node2D" unique_id=682184682]
+script = ExtResource("1_errlg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1416916868]

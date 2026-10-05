@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bsill2gxijman"]
+
+[ext_resource type="Script" uid="uid://d0uga0p64l8kw" path="res://script/test.gd" id="1_p5qov"]
+[ext_resource type="PackedScene" uid="uid://cb5n4rflwk1yd" path="res://scenes/card.tscn" id="2_u0f4s"]
+
+[node name="Node2D" type="Node2D" unique_id=868146506]
+script = ExtResource("1_p5qov")
+
+[node name="Card" parent="." unique_id=508252208 instance=ExtResource("2_u0f4s")]
+input_desc = "并"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1179284552]
